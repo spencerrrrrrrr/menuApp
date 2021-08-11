@@ -1,32 +1,26 @@
-let menu = {
+const menu = {
     _courses: {
       _appetizers: [],
       _mains: [],
       _desserts: [] 
     },
     get appetizers(){
-      return this._appetizers; 
+      return this._courses._appetizers; 
     },
     set appetizers(dish){
-      if (typeof dish==='string'){
-        this._appetizers.push(dish)
-      }
+        this._courses._appetizers.push(dish)
     },
     get mains(){
-      return this._mains;
+      return this._courses._mains;
     },
     set mains(dish){
-      if (typeof dish==='string'){
-        this._mains.push(dish)
-      }
+        this._courses._mains.push(dish)
     },
     get desserts(){
-      return this._desserts;
+      return this._courses._desserts;
     },
     set desserts(dish){
-      if (typeof dish==='string'){
-        this._desserts.push(dish)
-      }
+        this._courses._desserts.push(dish)
     },
     get courses(){
       return Object.entries(menu._courses);
