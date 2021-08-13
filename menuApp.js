@@ -68,3 +68,4 @@ const menu = {
   
   const meal = menu.generateRandomMeal()
   console.log(meal)
+  
